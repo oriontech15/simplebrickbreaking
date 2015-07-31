@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB095EE11B6ABCDC00985E9F /* blip.caf in Resources */ = {isa = PBXBuildFile; fileRef = DB095EDE1B6ABCDC00985E9F /* blip.caf */; };
+		DB095EE21B6ABCDC00985E9F /* brickhit.caf in Resources */ = {isa = PBXBuildFile; fileRef = DB095EDF1B6ABCDC00985E9F /* brickhit.caf */; };
+		DB095EE31B6ABCDC00985E9F /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = DB095EE01B6ABCDC00985E9F /* gameover.caf */; };
+		DB095EE81B6AC5B300985E9F /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = DB095EE71B6AC5B300985E9F /* GameOver.m */; };
+		DB095EEB1B6ADE0200985E9F /* GameWon.m in Sources */ = {isa = PBXBuildFile; fileRef = DB095EEA1B6ADE0200985E9F /* GameWon.m */; };
 		DB46283D1B6814FF00F35F52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46283C1B6814FF00F35F52 /* main.m */; };
 		DB4628401B6814FF00F35F52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46283F1B6814FF00F35F52 /* AppDelegate.m */; };
 		DB4628431B6814FF00F35F52 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4628421B6814FF00F35F52 /* GameScene.m */; };
-		DB4628451B6814FF00F35F52 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DB4628441B6814FF00F35F52 /* GameScene.sks */; };
 		DB4628481B6814FF00F35F52 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4628471B6814FF00F35F52 /* GameViewController.m */; };
 		DB46284B1B6814FF00F35F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB4628491B6814FF00F35F52 /* Main.storyboard */; };
 		DB46284D1B6814FF00F35F52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB46284C1B6814FF00F35F52 /* Images.xcassets */; };
@@ -29,6 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB095EDE1B6ABCDC00985E9F /* blip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blip.caf; sourceTree = "<group>"; };
+		DB095EDF1B6ABCDC00985E9F /* brickhit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = brickhit.caf; sourceTree = "<group>"; };
+		DB095EE01B6ABCDC00985E9F /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameover.caf; sourceTree = "<group>"; };
+		DB095EE61B6AC5B300985E9F /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
+		DB095EE71B6AC5B300985E9F /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
+		DB095EE91B6ADE0200985E9F /* GameWon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWon.h; sourceTree = "<group>"; };
+		DB095EEA1B6ADE0200985E9F /* GameWon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWon.m; sourceTree = "<group>"; };
 		DB4628371B6814FF00F35F52 /* BreakingBricks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingBricks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB46283B1B6814FF00F35F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB46283C1B6814FF00F35F52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,7 +47,6 @@
 		DB46283F1B6814FF00F35F52 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DB4628411B6814FF00F35F52 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		DB4628421B6814FF00F35F52 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		DB4628441B6814FF00F35F52 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		DB4628461B6814FF00F35F52 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		DB4628471B6814FF00F35F52 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		DB46284A1B6814FF00F35F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,11 +96,17 @@
 		DB4628391B6814FF00F35F52 /* BreakingBricks */ = {
 			isa = PBXGroup;
 			children = (
+				DB095EDE1B6ABCDC00985E9F /* blip.caf */,
+				DB095EDF1B6ABCDC00985E9F /* brickhit.caf */,
+				DB095EE01B6ABCDC00985E9F /* gameover.caf */,
 				DB46283E1B6814FF00F35F52 /* AppDelegate.h */,
 				DB46283F1B6814FF00F35F52 /* AppDelegate.m */,
 				DB4628411B6814FF00F35F52 /* GameScene.h */,
 				DB4628421B6814FF00F35F52 /* GameScene.m */,
-				DB4628441B6814FF00F35F52 /* GameScene.sks */,
+				DB095EE61B6AC5B300985E9F /* GameOver.h */,
+				DB095EE71B6AC5B300985E9F /* GameOver.m */,
+				DB095EE91B6ADE0200985E9F /* GameWon.h */,
+				DB095EEA1B6ADE0200985E9F /* GameWon.m */,
 				DB4628461B6814FF00F35F52 /* GameViewController.h */,
 				DB4628471B6814FF00F35F52 /* GameViewController.m */,
 				DB4628491B6814FF00F35F52 /* Main.storyboard */,
@@ -207,10 +223,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB095EE31B6ABCDC00985E9F /* gameover.caf in Resources */,
 				DB4628501B6814FF00F35F52 /* LaunchScreen.xib in Resources */,
 				DB46284D1B6814FF00F35F52 /* Images.xcassets in Resources */,
-				DB4628451B6814FF00F35F52 /* GameScene.sks in Resources */,
+				DB095EE21B6ABCDC00985E9F /* brickhit.caf in Resources */,
 				DB46284B1B6814FF00F35F52 /* Main.storyboard in Resources */,
+				DB095EE11B6ABCDC00985E9F /* blip.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +247,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB4628481B6814FF00F35F52 /* GameViewController.m in Sources */,
+				DB095EE81B6AC5B300985E9F /* GameOver.m in Sources */,
+				DB095EEB1B6ADE0200985E9F /* GameWon.m in Sources */,
 				DB4628401B6814FF00F35F52 /* AppDelegate.m in Sources */,
 				DB4628431B6814FF00F35F52 /* GameScene.m in Sources */,
 				DB46283D1B6814FF00F35F52 /* main.m in Sources */,
@@ -426,6 +446,7 @@
 				DB4628611B6814FF00F35F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB4628621B6814FF00F35F52 /* Build configuration list for PBXNativeTarget "BreakingBricksTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +455,7 @@
 				DB4628641B6814FF00F35F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
