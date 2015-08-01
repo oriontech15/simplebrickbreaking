@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "GameScene.h"
+#import "HomeScreen.h"
 
 @implementation GameViewController
 
@@ -23,7 +24,8 @@
     skView.ignoresSiblingOrder = YES;
     
     // Create and configure the scene.
-    self.scene = [GameScene sceneWithSize:skView.bounds.size];
+    
+    self.scene = [HomeScreen sceneWithSize:skView.bounds.size];
     self.scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
@@ -35,11 +37,16 @@
     return YES;
 }
 
+
 - (NSUInteger)supportedInterfaceOrientations
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+    {
         return UIInterfaceOrientationMaskAllButUpsideDown;
-    } else {
+    }
+    
+    else
+    {
         return UIInterfaceOrientationMaskAll;
     }
 }

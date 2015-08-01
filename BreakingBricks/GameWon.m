@@ -13,7 +13,7 @@
 
 -(void)didMoveToView:(SKView *)view
 {
-    self.backgroundColor = [SKColor blackColor];
+    
     
     SKLabelNode *winLabel = [SKLabelNode labelNodeWithFontNamed:@"Futura Medium"];
     winLabel.text = @"You Won!";

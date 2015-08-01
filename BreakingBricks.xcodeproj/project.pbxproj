@@ -12,6 +12,11 @@
 		DB095EE31B6ABCDC00985E9F /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = DB095EE01B6ABCDC00985E9F /* gameover.caf */; };
 		DB095EE81B6AC5B300985E9F /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = DB095EE71B6AC5B300985E9F /* GameOver.m */; };
 		DB095EEB1B6ADE0200985E9F /* GameWon.m in Sources */ = {isa = PBXBuildFile; fileRef = DB095EEA1B6ADE0200985E9F /* GameWon.m */; };
+		DB2D89901B6C1BD0004FA80F /* RedBrick.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2D898F1B6C1BD0004FA80F /* RedBrick.m */; };
+		DB2D89931B6D3113004FA80F /* BlueBrick.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2D89921B6D3113004FA80F /* BlueBrick.m */; };
+		DB2D89961B6D3125004FA80F /* PurpleBrick.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2D89951B6D3125004FA80F /* PurpleBrick.m */; };
+		DB2D89991B6D3166004FA80F /* YellowBrick.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2D89981B6D3166004FA80F /* YellowBrick.m */; };
+		DB2D899F1B6D632C004FA80F /* HomeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2D899E1B6D632C004FA80F /* HomeScreen.m */; };
 		DB46283D1B6814FF00F35F52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46283C1B6814FF00F35F52 /* main.m */; };
 		DB4628401B6814FF00F35F52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46283F1B6814FF00F35F52 /* AppDelegate.m */; };
 		DB4628431B6814FF00F35F52 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4628421B6814FF00F35F52 /* GameScene.m */; };
@@ -40,6 +45,16 @@
 		DB095EE71B6AC5B300985E9F /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
 		DB095EE91B6ADE0200985E9F /* GameWon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWon.h; sourceTree = "<group>"; };
 		DB095EEA1B6ADE0200985E9F /* GameWon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWon.m; sourceTree = "<group>"; };
+		DB2D898E1B6C1BD0004FA80F /* RedBrick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedBrick.h; sourceTree = "<group>"; };
+		DB2D898F1B6C1BD0004FA80F /* RedBrick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedBrick.m; sourceTree = "<group>"; };
+		DB2D89911B6D3113004FA80F /* BlueBrick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueBrick.h; sourceTree = "<group>"; };
+		DB2D89921B6D3113004FA80F /* BlueBrick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueBrick.m; sourceTree = "<group>"; };
+		DB2D89941B6D3125004FA80F /* PurpleBrick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurpleBrick.h; sourceTree = "<group>"; };
+		DB2D89951B6D3125004FA80F /* PurpleBrick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurpleBrick.m; sourceTree = "<group>"; };
+		DB2D89971B6D3166004FA80F /* YellowBrick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowBrick.h; sourceTree = "<group>"; };
+		DB2D89981B6D3166004FA80F /* YellowBrick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowBrick.m; sourceTree = "<group>"; };
+		DB2D899D1B6D632C004FA80F /* HomeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreen.h; sourceTree = "<group>"; };
+		DB2D899E1B6D632C004FA80F /* HomeScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreen.m; sourceTree = "<group>"; };
 		DB4628371B6814FF00F35F52 /* BreakingBricks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingBricks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB46283B1B6814FF00F35F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB46283C1B6814FF00F35F52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -75,6 +90,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB2D899C1B6D31DF004FA80F /* Bricks */ = {
+			isa = PBXGroup;
+			children = (
+				DB2D898E1B6C1BD0004FA80F /* RedBrick.h */,
+				DB2D898F1B6C1BD0004FA80F /* RedBrick.m */,
+				DB2D89911B6D3113004FA80F /* BlueBrick.h */,
+				DB2D89921B6D3113004FA80F /* BlueBrick.m */,
+				DB2D89941B6D3125004FA80F /* PurpleBrick.h */,
+				DB2D89951B6D3125004FA80F /* PurpleBrick.m */,
+				DB2D89971B6D3166004FA80F /* YellowBrick.h */,
+				DB2D89981B6D3166004FA80F /* YellowBrick.m */,
+			);
+			name = Bricks;
+			sourceTree = "<group>";
+		};
 		DB46282E1B6814FF00F35F52 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +133,8 @@
 				DB46283F1B6814FF00F35F52 /* AppDelegate.m */,
 				DB4628411B6814FF00F35F52 /* GameScene.h */,
 				DB4628421B6814FF00F35F52 /* GameScene.m */,
+				DB2D899D1B6D632C004FA80F /* HomeScreen.h */,
+				DB2D899E1B6D632C004FA80F /* HomeScreen.m */,
 				DB095EE61B6AC5B300985E9F /* GameOver.h */,
 				DB095EE71B6AC5B300985E9F /* GameOver.m */,
 				DB095EE91B6ADE0200985E9F /* GameWon.h */,
@@ -113,6 +145,7 @@
 				DB46284C1B6814FF00F35F52 /* Images.xcassets */,
 				DB46284E1B6814FF00F35F52 /* LaunchScreen.xib */,
 				DB46283A1B6814FF00F35F52 /* Supporting Files */,
+				DB2D899C1B6D31DF004FA80F /* Bricks */,
 			);
 			path = BreakingBricks;
 			sourceTree = "<group>";
@@ -247,11 +280,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB4628481B6814FF00F35F52 /* GameViewController.m in Sources */,
+				DB2D89931B6D3113004FA80F /* BlueBrick.m in Sources */,
 				DB095EE81B6AC5B300985E9F /* GameOver.m in Sources */,
+				DB2D899F1B6D632C004FA80F /* HomeScreen.m in Sources */,
 				DB095EEB1B6ADE0200985E9F /* GameWon.m in Sources */,
 				DB4628401B6814FF00F35F52 /* AppDelegate.m in Sources */,
+				DB2D89991B6D3166004FA80F /* YellowBrick.m in Sources */,
 				DB4628431B6814FF00F35F52 /* GameScene.m in Sources */,
 				DB46283D1B6814FF00F35F52 /* main.m in Sources */,
+				DB2D89961B6D3125004FA80F /* PurpleBrick.m in Sources */,
+				DB2D89901B6C1BD0004FA80F /* RedBrick.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

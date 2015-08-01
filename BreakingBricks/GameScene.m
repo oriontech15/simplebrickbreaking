@@ -10,6 +10,10 @@
 #import "GameScene.h"
 #import "GameOver.h"
 #import "GameWon.h"
+#import "RedBrick.h"
+#import "YellowBrick.h"
+#import "BlueBrick.h"
+#import "PurpleBrick.h"
 
 @interface GameScene ()
 
@@ -100,6 +104,8 @@
         {
             self.isBallInPlay = NO;
             [self.ball removeFromParent];
+            
+            self.ballCount--;
         }
 
         if (self.ballCount == 0)
@@ -132,18 +138,25 @@
     self.ball.physicsBody.linearDamping = 0;
     
     self.ball.physicsBody.categoryBitMask = ballCategory;
-    self.ball.physicsBody.contactTestBitMask = redBrickCategory | yellowBrickCategory | blueBrickCategory | purpleBrickCategory | paddleCategory | bottomEdgeCategory;
-    //ball.physicsBody.collisionBitMask = edgeCategory | brickCategory;
+    self.ball.physicsBody.contactTestBitMask = redBrickCategory | yellowBrickCategory | blueBrickCategory | purpleBrickCategory | paddleCategory | bottomEdgeCategory | topEdgeCategory;
     
     [self addChild:self.ball];
     
+    if (self.isReady == YES)
+    {
+        sleep(1.5);
+        [self applyVector];
+    }
+}
+
+-(void)applyVector
+{
     if (self.isReady == YES)
     {
         CGVector myVector = CGVectorMake([self getRandomNumberBetween:1 to:4], [self getRandomNumberBetween:1 to:4]);
         
         [self.ball.physicsBody applyImpulse:myVector];
     }
-    
 }
 
 -(int)getRandomNumberBetween:(int)from to:(int)to
@@ -173,144 +186,39 @@
     }
 }
 
--(void)addPurpleBrick
+-(void)addBricks
 {
     for (int i = 0; i < 8; i++)
     {
-        SKSpriteNode *purpleBrick = [SKSpriteNode spriteNodeWithImageNamed:@"purpleBrick"];
-        
-        purpleBrick.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:purpleBrick.frame.size];
-        purpleBrick.physicsBody.dynamic = NO;
-        purpleBrick.physicsBody.categoryBitMask = purpleBrickCategory;
         
         int xPos = self.size.width / 8.5 * (i+0.75);
-        int yPos = self.size.height - 310;
-        purpleBrick.position = CGPointMake(xPos, yPos);
+        int yPos = self.size.height - 90;
         
-        self.purpleScore = 100;
-        
-        [self addChild:purpleBrick];
-    }
-    
-    for (int i = 0; i < 8; i++)
-    {
-        SKSpriteNode *purpleBrick = [SKSpriteNode spriteNodeWithImageNamed:@"purpleBrick"];
-        
-        purpleBrick.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:purpleBrick.frame.size];
-        purpleBrick.physicsBody.dynamic = NO;
-        purpleBrick.physicsBody.categoryBitMask = purpleBrickCategory;
-        
-        int xPos = self.size.width / 8.5 * (i+0.75);
-        int yPos = self.size.height - 270;
-        purpleBrick.position = CGPointMake(xPos, yPos);
-        
-        self.purpleScore = 100;
-        
-        [self addChild:purpleBrick];
-    }
-}
-
--(void)addRedBrick
-{
-    for (int i = 0; i < 8; i++)
-    {
-        SKSpriteNode *redBrick = [SKSpriteNode spriteNodeWithImageNamed:@"redBrick"];
-        
-        redBrick.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:redBrick.frame.size];
-        redBrick.physicsBody.dynamic = NO;
-        redBrick.physicsBody.categoryBitMask = redBrickCategory;
-        
-        int xPos = self.size.width / 8.5 * (i+0.75);
-        int yPos = self.size.height - 70;
-        redBrick.position = CGPointMake(xPos, yPos);
-        
+        RedBrick *redBrick = [RedBrick initWithXPosition:xPos yPosition:yPos];
         self.redScore = 500;
-        
         [self addChild:redBrick];
         
-    }
-}
-
--(void)addYellowBrick
-{
-    for (int i = 0; i < 8; i++)
-    {
-        SKSpriteNode *yellowBrick = [SKSpriteNode spriteNodeWithImageNamed:@"yellowBrick"];
-        
-        yellowBrick.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:yellowBrick.frame.size];
-        yellowBrick.physicsBody.dynamic = NO;
-        yellowBrick.physicsBody.categoryBitMask = yellowBrickCategory;
-        
-        int xPos = self.size.width / 8.5 * (i+0.75);
-        int yPos = self.size.height - 190;
-        yellowBrick.position = CGPointMake(xPos, yPos);
-        
-        self.yellowScore = 250;
-        
-        [self addChild:yellowBrick];
-    }
-    
-    for (int i = 0; i < 8; i++)
-    {
-        SKSpriteNode *yellowBrick = [SKSpriteNode spriteNodeWithImageNamed:@"yellowBrick"];
-        
-        yellowBrick.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:yellowBrick.frame.size];
-        yellowBrick.physicsBody.dynamic = NO;
-        yellowBrick.physicsBody.categoryBitMask = yellowBrickCategory;
-        
-        int xPos = self.size.width / 8.5 * (i+0.75);
-        int yPos = self.size.height - 230;
-        yellowBrick.position = CGPointMake(xPos, yPos);
-        
-        self.yellowScore = 250;
-        
-        [self addChild:yellowBrick];
-    }
-}
-
--(void)addLightBlueBrick
-{
-    for (int i = 0; i < 8; i++)
-    {
-        SKSpriteNode *lightBlueBrick = [SKSpriteNode spriteNodeWithImageNamed:@"lightBlueBrick"];
-        
-        lightBlueBrick.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:lightBlueBrick.frame.size];
-        lightBlueBrick.physicsBody.dynamic = NO;
-        lightBlueBrick.physicsBody.categoryBitMask = blueBrickCategory;
-        
-        int xPos = self.size.width / 8.5 * (i+0.75);
-        int yPos = self.size.height - 110;
-        lightBlueBrick.position = CGPointMake(xPos, yPos);
-        
+        BlueBrick *blueBrick = [BlueBrick initWithXPosition:xPos yPosition:yPos - 40];
         self.lightBlueScore = 400;
+        [self addChild:blueBrick];
         
-        [self addChild:lightBlueBrick];
+        blueBrick = [BlueBrick initWithXPosition:xPos yPosition:yPos - 80];
+        [self addChild:blueBrick];
+        
+        YellowBrick *yellowBrick = [YellowBrick initWithXPosition:xPos yPosition:yPos - 120];
+        self.yellowScore = 250;
+        [self addChild:yellowBrick];
+        
+        yellowBrick = [YellowBrick initWithXPosition:xPos yPosition:yPos - 160];
+        [self addChild:yellowBrick];
+        
+        PurpleBrick *purpleBrick = [PurpleBrick initWithXPosition:xPos yPosition:yPos - 200];
+        self.purpleScore = 100;
+        [self addChild:purpleBrick];
+        
+        purpleBrick = [PurpleBrick initWithXPosition:xPos yPosition:yPos - 240];
+        [self addChild:purpleBrick];
     }
-    
-    for (int i = 0; i < 8; i++)
-    {
-        SKSpriteNode *lightBlueBrick = [SKSpriteNode spriteNodeWithImageNamed:@"lightBlueBrick"];
-        
-        lightBlueBrick.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:lightBlueBrick.frame.size];
-        lightBlueBrick.physicsBody.dynamic = NO;
-        lightBlueBrick.physicsBody.categoryBitMask = blueBrickCategory;
-        
-        int xPos = self.size.width / 8.5 * (i+0.75);
-        int yPos = self.size.height - 150;
-        lightBlueBrick.position = CGPointMake(xPos, yPos);
-        
-        self.lightBlueScore = 400;
-        
-        [self addChild:lightBlueBrick];
-    }
-}
-
-- (void)addBricks
-{
-    [self addYellowBrick];
-    [self addPurpleBrick];
-    [self addLightBlueBrick];
-    [self addRedBrick];
 }
 
 - (void)addBottomEdge
@@ -319,6 +227,15 @@
     bottomEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, 1) toPoint:CGPointMake(self.frame.size.width, 1)];
     bottomEdge.physicsBody.categoryBitMask = bottomEdgeCategory;
     [self addChild:bottomEdge];
+}
+
+- (void)addTopEdge
+{
+    SKNode *topEdge = [SKNode node];
+    topEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, self.size.height -50) toPoint:CGPointMake(self.frame.size.width, self.size.height - 50)];
+    topEdge.physicsBody.categoryBitMask = topEdgeCategory;
+    topEdge.physicsBody.contactTestBitMask = ballCategory;
+    [self addChild:topEdge];
 }
 
 - (void)addPlayer
@@ -369,18 +286,20 @@
     lives.position = CGPointMake(self.frame.size.width - 130, self.size.height -40);
     [self addChild:lives];
     
-    [self addNumBalls];
+    [self addLives];
     [self addPlayer];
     [self addBricks];
     [self addBottomEdge];
+    [self addTopEdge];
 }
 
--(void)addNumBalls
+-(void)addLives
 {
     self.numBalls1 = [SKSpriteNode spriteNodeWithImageNamed:@"tinyBall"];
     self.numBalls1.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.numBalls1.frame.size.width / 2];
     self.numBalls1.position = CGPointMake(self.frame.size.width - 90, self.size.height - 35);
     self.numBalls1.physicsBody.dynamic = NO;
+    self.numBalls1.physicsBody.contactTestBitMask = livesCategory;
         
     [self addChild:self.numBalls1];
     
@@ -388,6 +307,7 @@
     self.numBalls2.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.numBalls1.frame.size.width / 2];
     self.numBalls2.position = CGPointMake(self.frame.size.width - 65, self.size.height - 35);
     self.numBalls2.physicsBody.dynamic = NO;
+    self.numBalls2.physicsBody.contactTestBitMask = livesCategory;
     
     [self addChild:self.numBalls2];
     
@@ -395,6 +315,7 @@
     self.numBalls3.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.numBalls1.frame.size.width / 2];
     self.numBalls3.position = CGPointMake(self.frame.size.width - 40, self.size.height - 35);
     self.numBalls3.physicsBody.dynamic = NO;
+    self.numBalls3.physicsBody.contactTestBitMask = livesCategory;
     
     [self addChild:self.numBalls3];
 }
@@ -403,23 +324,31 @@
     /* Called before each frame is rendered */
 }
 
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     self.isReady = YES;
-    if (self.isBallInPlay == NO) {
+    
+    if (self.isBallInPlay == NO)
+    {
         [self addBall];
+    }
+    
+    if (self.isBallInPlay == NO && self.ballCount == 3)
+    {
         [self.numBalls1 removeFromParent];
     }
     
-    if (self.ballCount == 2) {
+    if (self.isBallInPlay == NO && self.ballCount == 2)
+    {
         [self.numBalls2 removeFromParent];
     }
     
-    if (self.ballCount == 1) {
+    if (self.isBallInPlay == NO && self.ballCount == 1)
+    {
         [self.numBalls3 removeFromParent];
     }
     
-    self.ballCount--;
+    //[self applyVector];
     self.isBallInPlay = YES;
     self.isPlaying = YES;
 }
