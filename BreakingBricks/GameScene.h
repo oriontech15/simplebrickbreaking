@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "ScoresScene.h"
 
 static const uint32_t ballCategory = 0x1 << 1;
 static const uint32_t livesCategory = 0x1 << 9;
@@ -23,6 +24,6 @@ static const uint32_t topEdgeCategory = 0x1 << 10;
 @property (nonatomic) NSInteger lightBlueScore;
 @property (nonatomic) NSInteger yellowScore;
 @property (nonatomic) NSInteger purpleScore;
-//@property (nonatomic, strong) GameScene *scene;
+@property (nonatomic) NSInteger totalScore;
 
 @end

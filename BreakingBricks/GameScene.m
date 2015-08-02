@@ -17,6 +17,7 @@
 
 @interface GameScene ()
 
+@property (nonatomic) ScoresScene *scoreScene;
 @property (nonatomic) SKSpriteNode *paddle;
 @property (nonatomic) SKSpriteNode *ball;
 @property (nonatomic) SKSpriteNode *numBalls1;
@@ -28,7 +29,6 @@
 @property (nonatomic) SKAction *playEndGameSFX;
 @property (nonatomic, assign) NSInteger brickCount;
 @property (nonatomic) NSInteger ballCount;
-@property (nonatomic) NSInteger totalScore;
 @property (nonatomic) BOOL isBallInPlay;
 
 @end
@@ -272,6 +272,7 @@
     self.isBallInPlay = NO;
     
     self.totalScore = 0;
+    
     self.scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Futura Medium"];
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)self.totalScore];
     self.scoreLabel.fontColor = [SKColor whiteColor];
@@ -357,6 +358,8 @@
 {
     self.totalScore += score;
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)self.totalScore];
+    
+    [self.scoreScene.scorsArray addObject:[NSNumber numberWithInteger:self.totalScore]];
 }
 
 @end

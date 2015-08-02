@@ -17,6 +17,7 @@
 		DB2D89961B6D3125004FA80F /* PurpleBrick.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2D89951B6D3125004FA80F /* PurpleBrick.m */; };
 		DB2D89991B6D3166004FA80F /* YellowBrick.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2D89981B6D3166004FA80F /* YellowBrick.m */; };
 		DB2D899F1B6D632C004FA80F /* HomeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2D899E1B6D632C004FA80F /* HomeScreen.m */; };
+		DB2D89D91B6EBDC0004FA80F /* ScoresScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2D89D81B6EBDC0004FA80F /* ScoresScene.m */; };
 		DB46283D1B6814FF00F35F52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46283C1B6814FF00F35F52 /* main.m */; };
 		DB4628401B6814FF00F35F52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46283F1B6814FF00F35F52 /* AppDelegate.m */; };
 		DB4628431B6814FF00F35F52 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4628421B6814FF00F35F52 /* GameScene.m */; };
@@ -55,6 +56,8 @@
 		DB2D89981B6D3166004FA80F /* YellowBrick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowBrick.m; sourceTree = "<group>"; };
 		DB2D899D1B6D632C004FA80F /* HomeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreen.h; sourceTree = "<group>"; };
 		DB2D899E1B6D632C004FA80F /* HomeScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreen.m; sourceTree = "<group>"; };
+		DB2D89D71B6EBDC0004FA80F /* ScoresScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresScene.h; sourceTree = "<group>"; };
+		DB2D89D81B6EBDC0004FA80F /* ScoresScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresScene.m; sourceTree = "<group>"; };
 		DB4628371B6814FF00F35F52 /* BreakingBricks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingBricks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB46283B1B6814FF00F35F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB46283C1B6814FF00F35F52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				DB4628421B6814FF00F35F52 /* GameScene.m */,
 				DB2D899D1B6D632C004FA80F /* HomeScreen.h */,
 				DB2D899E1B6D632C004FA80F /* HomeScreen.m */,
+				DB2D89D71B6EBDC0004FA80F /* ScoresScene.h */,
+				DB2D89D81B6EBDC0004FA80F /* ScoresScene.m */,
 				DB095EE61B6AC5B300985E9F /* GameOver.h */,
 				DB095EE71B6AC5B300985E9F /* GameOver.m */,
 				DB095EE91B6ADE0200985E9F /* GameWon.h */,
@@ -280,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB4628481B6814FF00F35F52 /* GameViewController.m in Sources */,
+				DB2D89D91B6EBDC0004FA80F /* ScoresScene.m in Sources */,
 				DB2D89931B6D3113004FA80F /* BlueBrick.m in Sources */,
 				DB095EE81B6AC5B300985E9F /* GameOver.m in Sources */,
 				DB2D899F1B6D632C004FA80F /* HomeScreen.m in Sources */,

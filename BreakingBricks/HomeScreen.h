@@ -8,6 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "GameScene.h"
+#import "ScoresScene.h"
 
 @interface HomeScreen : SKScene
 

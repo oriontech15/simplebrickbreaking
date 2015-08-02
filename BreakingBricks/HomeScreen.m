@@ -21,7 +21,7 @@
 
 -(void)playButton
 {
-    SKSpriteNode *start = [SKSpriteNode spriteNodeWithImageNamed:@"playGame"];
+    SKSpriteNode *start = [SKSpriteNode spriteNodeWithImageNamed:@"play"];
     start.name = @"playButton";//how the node is identified later
     start.zPosition = 1.0;
     start.position = CGPointMake(self.size.width / 2, self.size.height / 2 + 70);
@@ -31,7 +31,7 @@
 
 -(void)scoresButton
 {
-    SKSpriteNode *scores = [SKSpriteNode spriteNodeWithImageNamed:@"scores"];
+    SKSpriteNode *scores = [SKSpriteNode spriteNodeWithImageNamed:@"scoresX"];
     scores.name = @"scoresButton";//how the node is identified later
     scores.zPosition = 1.0;
     scores.position = CGPointMake(self.size.width / 2, self.size.height / 2 - 70);
@@ -53,9 +53,8 @@
     }
     
     if ([node.name isEqualToString:@"scoresButton"]) {
-        GameScene *newGame = [GameScene sceneWithSize:self.frame.size];
-        newGame.isPlaying = YES;
-        [self.view presentScene:newGame transition:[SKTransition flipHorizontalWithDuration:1.5]];
+        ScoresScene *scoresScene = [ScoresScene sceneWithSize:self.frame.size];
+        [self.view presentScene:scoresScene transition:[SKTransition flipHorizontalWithDuration:1.5]];
     }
 }
 
