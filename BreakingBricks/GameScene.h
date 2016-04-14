@@ -8,6 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "ScoresScene.h"
+#import "ScoresController.h"
 
 static const uint32_t ballCategory = 0x1 << 1;
 static const uint32_t livesCategory = 0x1 << 9;

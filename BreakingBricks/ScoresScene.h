@@ -9,9 +9,9 @@
 #import <SpriteKit/SpriteKit.h>
 #import "HomeScreen.h"
 #import "GameScene.h"
+#import "Score.h"
+#import "Stack.h"
 
 @interface ScoresScene : SKScene
-
-@property (nonatomic) NSMutableArray *scorsArray;
 
 @end

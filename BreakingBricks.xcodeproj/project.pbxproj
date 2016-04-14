@@ -12,6 +12,11 @@
 		DB095EE31B6ABCDC00985E9F /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = DB095EE01B6ABCDC00985E9F /* gameover.caf */; };
 		DB095EE81B6AC5B300985E9F /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = DB095EE71B6AC5B300985E9F /* GameOver.m */; };
 		DB095EEB1B6ADE0200985E9F /* GameWon.m in Sources */ = {isa = PBXBuildFile; fileRef = DB095EEA1B6ADE0200985E9F /* GameWon.m */; };
+		DB2178291B700E6900DE8377 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2178281B700E6900DE8377 /* Stack.m */; };
+		DB21782B1B700E8500DE8377 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB21782A1B700E8500DE8377 /* CoreData.framework */; };
+		DB21782F1B700F5E00DE8377 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB21782D1B700F5E00DE8377 /* Model.xcdatamodeld */; };
+		DB2178321B700FEB00DE8377 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2178311B700FEB00DE8377 /* Score.m */; };
+		DB2178351B70110B00DE8377 /* ScoresController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2178341B70110B00DE8377 /* ScoresController.m */; };
 		DB2D89901B6C1BD0004FA80F /* RedBrick.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2D898F1B6C1BD0004FA80F /* RedBrick.m */; };
 		DB2D89931B6D3113004FA80F /* BlueBrick.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2D89921B6D3113004FA80F /* BlueBrick.m */; };
 		DB2D89961B6D3125004FA80F /* PurpleBrick.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2D89951B6D3125004FA80F /* PurpleBrick.m */; };
@@ -46,6 +51,14 @@
 		DB095EE71B6AC5B300985E9F /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
 		DB095EE91B6ADE0200985E9F /* GameWon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWon.h; sourceTree = "<group>"; };
 		DB095EEA1B6ADE0200985E9F /* GameWon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWon.m; sourceTree = "<group>"; };
+		DB2178271B700E6900DE8377 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		DB2178281B700E6900DE8377 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		DB21782A1B700E8500DE8377 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DB21782E1B700F5E00DE8377 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		DB2178301B700FEB00DE8377 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		DB2178311B700FEB00DE8377 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		DB2178331B70110B00DE8377 /* ScoresController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresController.h; sourceTree = "<group>"; };
+		DB2178341B70110B00DE8377 /* ScoresController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresController.m; sourceTree = "<group>"; };
 		DB2D898E1B6C1BD0004FA80F /* RedBrick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedBrick.h; sourceTree = "<group>"; };
 		DB2D898F1B6C1BD0004FA80F /* RedBrick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedBrick.m; sourceTree = "<group>"; };
 		DB2D89911B6D3113004FA80F /* BlueBrick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueBrick.h; sourceTree = "<group>"; };
@@ -80,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB21782B1B700E8500DE8377 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +107,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB1D43851BE53FBE005C1523 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DB4628411B6814FF00F35F52 /* GameScene.h */,
+				DB4628421B6814FF00F35F52 /* GameScene.m */,
+				DB2D899D1B6D632C004FA80F /* HomeScreen.h */,
+				DB2D899E1B6D632C004FA80F /* HomeScreen.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		DB21782C1B700E9700DE8377 /* ScoresModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB21782D1B700F5E00DE8377 /* Model.xcdatamodeld */,
+				DB2178271B700E6900DE8377 /* Stack.h */,
+				DB2178281B700E6900DE8377 /* Stack.m */,
+				DB2178301B700FEB00DE8377 /* Score.h */,
+				DB2178311B700FEB00DE8377 /* Score.m */,
+				DB2D89D71B6EBDC0004FA80F /* ScoresScene.h */,
+				DB2D89D81B6EBDC0004FA80F /* ScoresScene.m */,
+				DB2178331B70110B00DE8377 /* ScoresController.h */,
+				DB2178341B70110B00DE8377 /* ScoresController.m */,
+			);
+			name = ScoresModel;
+			sourceTree = "<group>";
+		};
 		DB2D899C1B6D31DF004FA80F /* Bricks */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +152,7 @@
 		DB46282E1B6814FF00F35F52 = {
 			isa = PBXGroup;
 			children = (
+				DB21782A1B700E8500DE8377 /* CoreData.framework */,
 				DB4628391B6814FF00F35F52 /* BreakingBricks */,
 				DB4628581B6814FF00F35F52 /* BreakingBricksTests */,
 				DB4628381B6814FF00F35F52 /* Products */,
@@ -134,12 +176,9 @@
 				DB095EE01B6ABCDC00985E9F /* gameover.caf */,
 				DB46283E1B6814FF00F35F52 /* AppDelegate.h */,
 				DB46283F1B6814FF00F35F52 /* AppDelegate.m */,
-				DB4628411B6814FF00F35F52 /* GameScene.h */,
-				DB4628421B6814FF00F35F52 /* GameScene.m */,
-				DB2D899D1B6D632C004FA80F /* HomeScreen.h */,
-				DB2D899E1B6D632C004FA80F /* HomeScreen.m */,
-				DB2D89D71B6EBDC0004FA80F /* ScoresScene.h */,
-				DB2D89D81B6EBDC0004FA80F /* ScoresScene.m */,
+				DB1D43851BE53FBE005C1523 /* Main */,
+				DB2D899C1B6D31DF004FA80F /* Bricks */,
+				DB21782C1B700E9700DE8377 /* ScoresModel */,
 				DB095EE61B6AC5B300985E9F /* GameOver.h */,
 				DB095EE71B6AC5B300985E9F /* GameOver.m */,
 				DB095EE91B6ADE0200985E9F /* GameWon.h */,
@@ -150,7 +189,6 @@
 				DB46284C1B6814FF00F35F52 /* Images.xcassets */,
 				DB46284E1B6814FF00F35F52 /* LaunchScreen.xib */,
 				DB46283A1B6814FF00F35F52 /* Supporting Files */,
-				DB2D899C1B6D31DF004FA80F /* Bricks */,
 			);
 			path = BreakingBricks;
 			sourceTree = "<group>";
@@ -225,11 +263,12 @@
 		DB46282F1B6814FF00F35F52 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Justin Smith";
 				TargetAttributes = {
 					DB4628361B6814FF00F35F52 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 4637N428EN;
 					};
 					DB4628541B6814FF00F35F52 = {
 						CreatedOnToolsVersion = 6.4;
@@ -284,8 +323,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB2178351B70110B00DE8377 /* ScoresController.m in Sources */,
 				DB4628481B6814FF00F35F52 /* GameViewController.m in Sources */,
+				DB2178291B700E6900DE8377 /* Stack.m in Sources */,
 				DB2D89D91B6EBDC0004FA80F /* ScoresScene.m in Sources */,
+				DB21782F1B700F5E00DE8377 /* Model.xcdatamodeld in Sources */,
 				DB2D89931B6D3113004FA80F /* BlueBrick.m in Sources */,
 				DB095EE81B6AC5B300985E9F /* GameOver.m in Sources */,
 				DB2D899F1B6D632C004FA80F /* HomeScreen.m in Sources */,
@@ -294,6 +336,7 @@
 				DB2D89991B6D3166004FA80F /* YellowBrick.m in Sources */,
 				DB4628431B6814FF00F35F52 /* GameScene.m in Sources */,
 				DB46283D1B6814FF00F35F52 /* main.m in Sources */,
+				DB2178321B700FEB00DE8377 /* Score.m in Sources */,
 				DB2D89961B6D3125004FA80F /* PurpleBrick.m in Sources */,
 				DB2D89901B6C1BD0004FA80F /* RedBrick.m in Sources */,
 			);
@@ -340,7 +383,7 @@
 		DB46285D1B6814FF00F35F52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -358,6 +401,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -383,7 +427,7 @@
 		DB46285E1B6814FF00F35F52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -421,9 +465,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BreakingBricks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codesmith.breakingBricks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -431,9 +479,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BreakingBricks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codesmith.breakingBricks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -441,16 +493,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = BreakingBricksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreakingBricks.app/BreakingBricks";
 			};
@@ -460,12 +509,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = BreakingBricksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreakingBricks.app/BreakingBricks";
 			};
@@ -502,6 +548,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DB21782D1B700F5E00DE8377 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DB21782E1B700F5E00DE8377 /* Model.xcdatamodel */,
+			);
+			currentVersion = DB21782E1B700F5E00DE8377 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DB46282F1B6814FF00F35F52 /* Project object */;
 }

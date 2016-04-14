@@ -15,6 +15,21 @@
 {
     self.backgroundColor = [SKColor blackColor];
     
+    
+    
+    SKLabelNode *homeScreen = [SKLabelNode labelNodeWithFontNamed:@"Ubuntu Bold"];
+    homeScreen.text = [NSString stringWithFormat:@"Brick Breaker"];
+    homeScreen.fontColor = [SKColor colorWithRed:0.165f green:0.988f blue:0.596f alpha:1.00f];;
+    homeScreen.fontSize = 40;
+    homeScreen.position = CGPointMake(self.frame.size.width / 2, self.size.height - 120);
+    [self addChild:homeScreen];
+    
+    SKAction *scoreAction = [SKAction scaleBy:1.1 duration:0.6];
+    SKAction * revertAction = [SKAction scaleTo:1 duration:0.6];
+    SKAction *completeAction = [SKAction sequence:@[scoreAction, revertAction]];
+    SKAction *repeatAction = [SKAction repeatActionForever:completeAction];
+    [homeScreen runAction:repeatAction];
+    
     [self playButton];
     [self scoresButton];
 }

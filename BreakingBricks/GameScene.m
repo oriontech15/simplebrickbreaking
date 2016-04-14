@@ -111,8 +111,9 @@
         if (self.ballCount == 0)
         {
             GameOver *end = [GameOver sceneWithSize:self.frame.size];
-            
+            [self addScoreToScoreScene];
             [self.view presentScene:end transition:[SKTransition doorsOpenHorizontalWithDuration:1.2]];
+            
         }
     }
     
@@ -121,6 +122,7 @@
         self.isPlaying = NO;
         
         GameWon *win = [GameWon sceneWithSize:self.frame.size];
+        [self addScoreToScoreScene];
         [self.view presentScene:win transition:[SKTransition crossFadeWithDuration:1.2]];
     }
 }
@@ -358,8 +360,12 @@
 {
     self.totalScore += score;
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)self.totalScore];
-    
-    [self.scoreScene.scorsArray addObject:[NSNumber numberWithInteger:self.totalScore]];
+}
+
+-(void)addScoreToScoreScene
+{
+    [[ScoresController sharedInstance] createScore:self.totalScore];
+    [[ScoresController sharedInstance] save];
 }
 
 @end

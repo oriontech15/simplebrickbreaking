@@ -16,17 +16,43 @@
     
     [self okButtonBackToHomeScreen];
     
-    int yPos = self.size.height - 10;
+    SKLabelNode *highScoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Futura Medium"];
+    highScoreLabel.text = @"High Scores";
+    highScoreLabel.fontColor = [SKColor colorWithRed:0.149 green:0.604 blue:0.859 alpha:1.000];
+    highScoreLabel.fontSize = 35;
+    highScoreLabel.position = CGPointMake(self.size.width / 2, self.size.height - 80);
     
-    for (NSNumber *score in self.scorsArray) {
+    [self addChild:highScoreLabel];
+    
+    NSArray *sortedArray;
+    
+    NSSortDescriptor *sorter = [NSSortDescriptor sortDescriptorWithKey:@"totalScore" ascending:NO];
+    
+    sortedArray = [[[ScoresController sharedInstance] scores] sortedArrayUsingDescriptors:@[sorter]];
+    float amount = 7;
+    if ([[ScoresController sharedInstance] scores].count < 7) {
+        amount = [[ScoresController sharedInstance] scores].count;
+    }
+    for (int i = 0; i < amount; i++)
+    {
+        int y = amount - (i+1);
+        NSLog(@"scores count: %lu", (unsigned long)[[ScoresController sharedInstance] scores].count);
+        int yPos = (self.size.height / 6) + (y * 71);
+        NSLog(@"y:pos %d", y);
+
+        Score *score = sortedArray[i];
+        
+        //NSLog(@"%@", sortedArray[i]);
+        
         SKLabelNode *scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Futura Medium"];
-        scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)score];
+        scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)[score.totalScore integerValue]];
         scoreLabel.fontColor = [SKColor whiteColor];
         scoreLabel.fontSize = 20;
-        scoreLabel.position = CGPointMake(70, yPos - 40);
-        
+        scoreLabel.position = CGPointMake(self.size.width / 2, yPos);
         [self addChild:scoreLabel];
     }
+    
+    [[ScoresController sharedInstance] save];
 }
 
 -(void)okButtonBackToHomeScreen
